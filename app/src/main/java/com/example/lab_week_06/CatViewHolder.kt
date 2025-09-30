@@ -12,8 +12,9 @@ import kotlin.getValue
 
 
 class CatViewHolder(
-    containerView: View,
-    private  val imageLoader: ImageLoader
+    private val containerView: View,
+    private  val imageLoader: ImageLoader,
+    private val onClickListener: CatAdapter.OnClickListener
 ): RecyclerView.ViewHolder(containerView){
     private val FEMALE_SYMBOL = "\u2640"
     private val MALE_SYMBOL = "\u2642"
@@ -39,6 +40,9 @@ class CatViewHolder(
 
     //This function is called in the adapter to provide the binding function
     fun bindData(cat: CatModel) {
+        containerView.setOnClickListener {
+            onClickListener.onItemClick(cat)
+        }
         imageLoader.loadImage(cat.imageUrl, catPhotoView)
         catNameView.text = cat.name
         catBreedView.text = when (cat.breed) {
@@ -53,5 +57,9 @@ class CatViewHolder(
             Gender.Male -> MALE_SYMBOL
             else -> UNKNOWN_SYMBOL
         }
+    }
+
+    interface OnClickListener{
+        fun onClick(cat: CatModel)
     }
 }
