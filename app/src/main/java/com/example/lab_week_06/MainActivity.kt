@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.lab_week_06.CatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lab_week_06.model.CatBreed
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
             this,
             LinearLayoutManager.VERTICAL, false
         )
+
+        val itemTouchHelper = ItemTouchHelper(catAdapter.swipeToDeleteCallback)
+        itemTouchHelper.attachToRecyclerView(recyclerView)
+
         //Add data to the model list in the adapter
         catAdapter.setData(
             listOf(
