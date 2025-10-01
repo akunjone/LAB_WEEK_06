@@ -65,6 +65,62 @@ class MainActivity : AppCompatActivity() {
                     "Curious George",
                     "Award winning investigator",
                     "https://cdn2.thecatapi.com/images/bar.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.DomesticShorthair,
+                    "Tom",
+                    "Always chasing Jerry",
+                    "https://cdn2.thecatapi.com/images/acd.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.BurmeseCat,
+                    "Luna",
+                    "Loves moonlight naps",
+                    "https://cdn2.thecatapi.com/images/aaa.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.Birman,
+                    "Simba",
+                    "The little lion king",
+                    "https://cdn2.thecatapi.com/images/ab1.jpg"
+                ),
+                CatModel(
+                    Gender.Unknown,
+                    CatBreed.Ragdoll,
+                    "Milo",
+                    "Playful and curious",
+                    "https://cdn2.thecatapi.com/images/60g.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.ScottishFold,
+                    "Nala",
+                    "Brave and kind",
+                    "https://cdn2.thecatapi.com/images/a80.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.TurkishAngora,
+                    "Oscar",
+                    "Lazy and cuddly",
+                    "https://cdn2.thecatapi.com/images/ba8.jpg"
+                ),
+                CatModel(
+                    Gender.Unknown,
+                    CatBreed.Korat,
+                    "Cleo",
+                    "Elegant and mysterious",
+                    "https://cdn2.thecatapi.com/images/a80.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.HimalayanCat,
+                    "Bordi",
+                    "Cute and powerful",
+                    "https://cdn2.thecatapi.com/images/ab2.jpg"
                 )
             )
         )
